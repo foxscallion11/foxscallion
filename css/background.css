@@ -1,8 +1,9 @@
-#web_bg {
-  /* 背景图像的地址（url括号里）  */
-  background: url(../img/3.png);
-  /* 背景图像不重复 */
-  background-repeat: no-repeat;
-  /* 背景图像大小 */
-  background-size: cover;
+body {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),
+        default;
+}
+a,
+img {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+        default;
 }
