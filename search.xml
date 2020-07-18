@@ -4,75 +4,11 @@
   
     
     <entry>
-      <title>测试文章2</title>
-      <link href="/2020/07/18/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A02/"/>
-      <url>/2020/07/18/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A02/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>你好</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 文章 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 测试 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>测试文章1</title>
-      <link href="/2020/07/18/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A01/"/>
-      <url>/2020/07/18/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A01/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>测试文章</title>
-      <link href="/2020/07/18/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
-      <url>/2020/07/18/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>美好一天开始了</title>
-      <link href="/2020/07/18/%E7%BE%8E%E5%A5%BD%E4%B8%80%E5%A4%A9%E5%BC%80%E5%A7%8B%E4%BA%86/"/>
-      <url>/2020/07/18/%E7%BE%8E%E5%A5%BD%E4%B8%80%E5%A4%A9%E5%BC%80%E5%A7%8B%E4%BA%86/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>留言板功能完成</title>
       <link href="/2020/07/17/%E7%95%99%E8%A8%80%E6%9D%BF%E5%8A%9F%E8%83%BD%E5%AE%8C%E6%88%90/"/>
       <url>/2020/07/17/%E7%95%99%E8%A8%80%E6%9D%BF%E5%8A%9F%E8%83%BD%E5%AE%8C%E6%88%90/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>##评论与回复</p><p><img src= "/img/loading.gif" data-src="https://i.loli.net/2020/07/17/twF6emKR5TCjlGP.png" alt="1594962134113.png"></p><p>##邮箱功能提醒成功</p><p><img src= "/img/loading.gif" data-src="/2020/07/17/%E7%95%99%E8%A8%80%E6%9D%BF%E5%8A%9F%E8%83%BD%E5%AE%8C%E6%88%90/2.jpg" alt></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src= "/img/loading.gif" data-src="/2020/07/17/%E7%95%99%E8%A8%80%E6%9D%BF%E5%8A%9F%E8%83%BD%E5%AE%8C%E6%88%90/2.jpg" alt="1"></p><p><img src= "/img/loading.gif" data-src="https://i.loli.net/2020/07/16/jlcBhprOtFnKS9G.png" alt="4.png"></p><p><img src= "/img/loading.gif" data-src="/2020/07/17/%E7%95%99%E8%A8%80%E6%9D%BF%E5%8A%9F%E8%83%BD%E5%AE%8C%E6%88%90/%E7%95%99%E8%A8%80%E6%9D%BF%E5%8A%9F%E8%83%BD%E5%AE%8C%E6%88%90%5C2.jpg" alt="4.png"></p>]]></content>
       
       
       <categories>
@@ -298,19 +234,6 @@
       <url>/2020/07/16/git/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>关于Git的用法我们已经写七篇文章，介绍了Git的不少用法，这些足以应付工作中90%的需求了，剩下的10%就需要小伙伴们在工作中自己慢慢总结了，我这里再给小伙伴们推荐一点Git学习资料，为我们的Git系列画上一个句号。  </p><h2 id="书"><a href="#书" class="headerlink" title="书"></a>书</h2><p>推荐两本个人觉得很不错的书：  </p><p>1.《GitHub入门与实践》<br>2.《Pro Git》  </p><p>《GitHub入门与实践》秉承了日系技术书刊一贯的“手把手教学”风格，作者用亲切的语言，简明扼要的介绍，配以生动详实的示例一步步讲解GitHub和Git的使用方法。《Pro Git》作为Git官方推荐书籍，《Pro Git》值得Git初学者和爱好者认真阅读一遍。  </p><h2 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h2><p>1.<a href="https://learngitbranching.js.org" target="_blank" rel="noopener">https://learngitbranching.js.org</a>  </p><p>链接是一个git学习网站，我们可以直接在上面练习git命令。  </p><h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>推荐本公号前面的几篇教程:  </p><hr><p>1.<a href="https://mp.weixin.qq.com/s/3RheAJ9LYKK5BnVr331h5A" target="_blank" rel="noopener">Git概述</a><br>2.<a href="https://mp.weixin.qq.com/s/S1T4wy3srmLvXgIjvpVEwg" target="_blank" rel="noopener">Git基本操作</a><br>3.<a href="https://mp.weixin.qq.com/s/WiLnRQfDVITHMYzGl9pAzQ" target="_blank" rel="noopener">Git中的各种后悔药</a><br>4.<a href="https://mp.weixin.qq.com/s/9OZY7x9DSyRO7T56TyDJ8Q" target="_blank" rel="noopener">Git分支管理</a><br>5.<a href="https://mp.weixin.qq.com/s/x5bRe4QBMoVFKv5jNl9iRw" target="_blank" rel="noopener">Git关联远程仓库</a><br>6.<a href="https://mp.weixin.qq.com/s/S5rrBQoWwof7n3ZRTrZGWQ" target="_blank" rel="noopener">Git工作区储藏兼谈分支管理中的一个小问题</a><br>7.<a href="https://mp.weixin.qq.com/s/Jwr4fjCw7MBUD-CalVXhZQ" target="_blank" rel="noopener">Git标签管理</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>今日目标</title>
-      <link href="/2020/07/16/%E4%BB%8A%E6%97%A5%E7%9B%AE%E6%A0%87/"/>
-      <url>/2020/07/16/%E4%BB%8A%E6%97%A5%E7%9B%AE%E6%A0%87/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="好好学习"><a href="#好好学习" class="headerlink" title="好好学习"></a>好好学习</h2><p>实现博客音乐列表，播放功能</p><p>实现博客视频播放，</p><p>留言板等等。</p><p><img src= "/img/loading.gif" data-src="/2020/07/16/%E4%BB%8A%E6%97%A5%E7%9B%AE%E6%A0%87/1.jpg" alt="1"></p><p><img src= "/img/loading.gif" data-src="/2020/07/16/%E4%BB%8A%E6%97%A5%E7%9B%AE%E6%A0%87/1.png" alt="1"></p>]]></content>
       
       
       
