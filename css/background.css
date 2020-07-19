@@ -10,7 +10,7 @@
     }
 }
 #web_bg {
-    background: linear-gradient(-45deg, #00ff00, #e4007f, #00ffff, #ffffff);
+    background: linear-gradient(-45deg, #eb6100, #8fc31f, #8957a1, #e4007f);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
 }
