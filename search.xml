@@ -4,13 +4,25 @@
   
     
     <entry>
-      <title>ttt</title>
-      <link href="/2020/07/18/ttt/"/>
-      <url>/2020/07/18/ttt/</url>
+      <title>【每日一更】之hexo魔改在线说说发布文章</title>
+      <link href="/2020/07/19/%E3%80%90%E6%AF%8F%E6%97%A5%E4%B8%80%E6%9B%B4%E3%80%91%E4%B9%8Bhexo%E9%AD%94%E6%94%B9%E5%9C%A8%E7%BA%BF%E8%AF%B4%E8%AF%B4%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/"/>
+      <url>/2020/07/19/%E3%80%90%E6%AF%8F%E6%97%A5%E4%B8%80%E6%9B%B4%E3%80%91%E4%B9%8Bhexo%E9%AD%94%E6%94%B9%E5%9C%A8%E7%BA%BF%E8%AF%B4%E8%AF%B4%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>体验账号</h1><h2>账号： admin</h2><h2>密码： 123456</h2><h3>该用户权限只支持查看，发布，暂不支持删除</h3><h3>点击头像输入用户名账号及密码就可以登入，发布说说啦</h3><h3>目前之前发布类型为：头像图片地址，文章，音频，视频</h3><p>头像选择地址</p><p>https://i.loli.net/2020/07/18/ySbW9LI3CtahuRj.jpghttps://i.loli.net/2020/07/18/Ku9LMUlAd4SepEa.jpghttps://i.loli.net/2020/07/18/WYzErKF2nT9eDVs.jpghttps://i.loli.net/2020/07/18/O42bYPVl5oAuBHW.jpghttps://i.loli.net/2020/07/18/WENByLKtmqk49az.jpghttps://i.loli.net/2020/07/18/WJ8eEGdqfS9VNPv.jpghttps://i.loli.net/2020/07/18/z1NXaDclnWHtTFU.jpghttps://i.loli.net/2020/07/18/tULHInlZK2poqg3.jpg</p><script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script><script>var img="";                 //说说旁边显示的头像var appID="4gHmvWqyv9hJj1eeIvret9Xr-MdYXbMMI";               //Leancloud中的AppIDvar appKEY="PXIYthePrPnreXTxz1oMcjjz";              //Leancloud中的AppKEYvar per="5";                 //每页显示说说的数量var username="foxscallion";            //Leancloud中设置的用户名var placeholder1=""    //在编辑说说的输入框中的占位符var placeholder2=""    //输入密码的输入框的占位符var placeholder3=""    //输入头像url的输入框的占位符（不填写开启即为默认头像）var lazy=""            //是否开启加载动画（1：开启 0：关闭）var bgimg=""        //说说输入框背景图片（需为图片格式）</script> <div id="artitalk_main"></div><script type="text/javascript" src="https://unpkg.com/artitalk"></script><!-- <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script><body>          <script>    var appID="uhqjOJy50zYt7MDHIgyTlTFD-gzGzoHsz";    var appKEY="oN1KHsMujWoqXtwUkDFDebTj";    </script>          <div id="artitalk_main"></div>    <script type="text/javascript" src="https://unpkg.com/artitalk"></script></body> -->]]></content>
       
       
+      <categories>
+          
+          <category> chat </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 说说 </tag>
+            
+        </tags>
       
     </entry>
     
