@@ -5589,3 +5589,10 @@ body {
 a:hover {
   cursor: url("https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur"), pointer;
 }
+@font-face {
+  font-family: Pompiere;
+  src: url("https://fonts.font.im/css?family=Pompiere");
+}
+body {
+  font-family: 'Pompiere', cursive;
+}
