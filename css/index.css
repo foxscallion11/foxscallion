@@ -2779,6 +2779,9 @@ _:future,
   margin: 0 auto;
   padding: 2rem 15px;
   max-width: 1200px;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
 }
 #recent-posts {
   width: 75%;
@@ -2958,17 +2961,13 @@ _:future,
 .layout_page > div:first-child:not(.recent-posts) {
   padding: 50px 40px;
   border-radius: 8px;
-  background: #fff;
-  -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
-  box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  transition: all 0.3s;
 }
-.layout_post > #post:hover,
-.layout_page > div:first-child:not(.recent-posts):hover {
+box-shadow: 0 4px 8px 6px rgba(7,
+17,
+27,
+.06),
+transition: all .3s,
+:hover {
   -webkit-box-shadow: 0 4px 12px 12px rgba(7,17,27,0.15);
   box-shadow: 0 4px 12px 12px rgba(7,17,27,0.15);
 }
@@ -3172,6 +3171,9 @@ _:future,
 @media screen and (max-width: 768px) {
   .layout_page {
     padding: 1rem 5px !important;
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    filter: alpha(opacity=90);
   }
   .layout_page > div:first-child:not(.recent-posts) {
     padding: 1.8rem 0.7rem;
@@ -5561,4 +5563,28 @@ blockquote.pullquote.right {
 #local-search .search-result-list {
   overflow-y: auto;
   max-height: 10.5rem;
+}
+#article-container figure.highlight,
+#article-container pre {
+  color: #a9a9a9;
+  background: #f3f3f3;
+}
+#article-container figure.highlight .highlight-tools {
+  color: #a9a9a9;
+  background: #eee;
+}
+#article-container figure.highlight .gutter pre {
+  color: #999;
+  background: #f3f3f3;
+}
+#article-container figure.highlight figcaption a {
+  color: #f3f3f3 !important;
+}
+/**普通指针样式**/
+body {
+  cursor: url("https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur"), default;
+}
+/**链接指针样式**/
+a:hover {
+  cursor: url("https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur"), pointer;
 }
