@@ -1,4 +1,4 @@
-@keyframes gradientBG {
+/* @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
     }
@@ -13,4 +13,13 @@
     background: linear-gradient(-45deg, #eb6100, #8fc31f, #8957a1, #e4007f);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-}
+} */
+#web_bg {
+    /* 背景图像的地址（url括号里）  */
+    background: url(https://cdn.jsdelivr.net/gh/dada6969/images/images/1000442.jpg);
+    /* 背景图像不重复 */
+    background-repeat: no-repeat;
+    /* 背景图像大小 */
+    background-size: cover;
+    /* opacity:0.2 */
+  }
