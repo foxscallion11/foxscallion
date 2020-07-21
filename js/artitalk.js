@@ -1,4 +1,4 @@
-<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>/**
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\dada69\assets\css\APlayer.min.css"><script src="\dada69\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>/**
  * Minified by jsDelivr using Terser v3.14.1.
  * Original file: /gh/Artitalk/Artitalk-jsdelivr@master/at237.js
  *
