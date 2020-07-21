@@ -51,7 +51,7 @@ body {
   min-height: 100%;
   background: #fff;
   color: #4c4948;
-  font-size: 20px;
+  font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
   line-height: 2;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -132,7 +132,7 @@ hr:before {
   z-index: 1;
   color: #80c8f8;
   content: '\f0c4';
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -397,6 +397,12 @@ canvas:not(#ribbon-canvas),
   -o-animation: tocsidebarRtoL 0.7s;
   -ms-animation: tocsidebarRtoL 0.7s;
   animation: tocsidebarRtoL 0.7s;
+}
+@font-face {
+  font-family: 'Pompiere';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Pompiere '), local('Pompiere-Regular'), url("https://fonts.gstatic.font.im/s/pompiere/v9/VEMyRoxis5Dwuyeov5Wq7DQ.ttf") format('truetype');
 }
 @-moz-keyframes scroll-down-effect {
   0% {
