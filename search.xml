@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>【Hexo+Coding】之coding自动部署</title>
+      <link href="/posts/403d8ced.html"/>
+      <url>/posts/403d8ced.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote><p>注： 著作权归作者所有。<br>商业转载请联系作者获得授权，非商业转载请注明出处。<br>原作者：foxscallion 本文没有授权给任何组织、企业和个人转载，未经作者允许禁止转载！ </p><footer><strong>Seth Godin</strong></footer></blockquote><h3 id="coding-介绍"><a href="#coding-介绍" class="headerlink" title="coding 介绍"></a>coding 介绍</h3><ul><li>在 CODING 您可以实现代码不落地完成整个项目的开发工作，完善的云端开发环境，让您打开浏览器即可开始编写代码。高可用代码仓库支持 Git/SVN 版本控制，可以进行分支粒度管理、建立代码评审机制</li><li>项目完成开发进入测试阶段，CODING 为您提供井然有序的测试协同工具，从编写测试用例、规划测试计划、自动化完成测试，到记录测试结果、产出测试报告并跟踪每一个缺陷，完美衔接开发、测试、产品之间的协同。</li><li>持续集成、持续部署、制品库功能为项目的持续交付提供完整的工具服务，支持所有主流语言以及多种目标环境，和代码仓库紧密关联，产出构建可视化报告。释放研发人力，提高生产效率。</li><li>Coding 是一个面向开发者的云端开发平台 [1]  ，目前提供代码托管，运行空间，质量控制，项目管理等功能。此外，还提供社会化协作功能，包含了社交元素，方便开发者进行技术讨论和协作<h3 id="coding注册"><a href="#coding注册" class="headerlink" title="coding注册"></a>coding注册</h3></li><li>链接<a><a href="https://coding.net/" target="_blank" rel="noopener">https://coding.net/</a></a><h3 id="coding使用"><a href="#coding使用" class="headerlink" title="coding使用"></a>coding使用</h3></li><li>使用你刚刚注册的账号登入</li><li>创建代码仓库</li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200723/140911053.png" alt="mark"></li><li>创建项目，选择代码托管</li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200723/135750750.png" alt="mark"></li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200723/135854328.png" alt="mark"></li><li>加入项目，点击左下角，项目设置-》项目成员-》功能开关，把持续部署，持续集成打开</li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200723/140234452.png" alt="mark"></li><li>点击持续集成-》构建计划</li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200723/140340068.png" alt="mark"></li><li>在最下面选择自定义模板</li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200723/140447591.png" alt="mark"></li><li>名称自己随便取一个，我的叫test</li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200723/141002457.png" alt="mark"></li><li>点击流程配置-》文本编辑-保存<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"> pipeline &#123;</span><br><span class="line">  agent any</span><br><span class="line">  stages &#123;</span><br><span class="line">    stage(&#39;克隆项目&#39;) &#123;</span><br><span class="line">      steps &#123;</span><br><span class="line">        sh &#39;git clone https:&#x2F;&#x2F;Github用户名:密码@github.com&#x2F;用户名&#x2F;仓库.git .&#39;</span><br><span class="line">        sh &#39;ls -a&#39;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    stage(&#39;安装依赖&#39;) &#123;</span><br><span class="line">      steps &#123;</span><br><span class="line">        sh &#39;ls -a&#39;</span><br><span class="line">        sh &#39;npm install -g hexo-cli&#39;</span><br><span class="line">        sh &#39;npm install hexo --save&#39;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    stage(&#39;构建发布&#39;) &#123;</span><br><span class="line">      steps &#123;</span><br><span class="line">        sh &#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&#39;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>复制coding里的hexo仓库地址</li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200723/141604417.png" alt="mark"></li><li>复制到你的hexo项目的_config.yml</li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200723/141803925.png" alt="mark"></li><li>部署公钥-&gt;新建公钥</li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200723/141840024.png" alt="mark"></li><li>你的邮箱公钥在c：/用户/用户名/.ssh/id_rsa.pub<h2 id="回到hexo项目"><a href="#回到hexo项目" class="headerlink" title="回到hexo项目"></a>回到hexo项目</h2></li><li>hexo clean，hexo g， hexo deploy</li><li>提交到coding<h2 id="回到coding"><a href="#回到coding" class="headerlink" title="回到coding"></a>回到coding</h2></li><li>coding帮你自动部署了</li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200723/142353552.png" alt="mark"><h2 id="创建静态网站"><a href="#创建静态网站" class="headerlink" title="创建静态网站"></a>创建静态网站</h2></li><li>点击持续集成-》静态网站</li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200723/142511409.png" alt="mark"></li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200723/142606980.png" alt="mark"></li><li>点击立刻部署</li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200723/142658332.png" alt="mark"></li><li>现在就可以访问了</li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200723/142721935.png" alt="mark"></li><li><div class="tip qq"><p>创作不易，如需转发请附上链接</p><p></p></div><body oncontextmenu="return false" onselectstart="return false" oncopy="return false"></body></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+          <category> 部署 </category>
+          
+          <category> Coding </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> coding </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【Hexo+百度】之百度主动推送</title>
       <link href="/posts/6b5ec0b4.html"/>
       <url>/posts/6b5ec0b4.html</url>
@@ -33,14 +62,16 @@
       <link href="/posts/2c4e5608.html"/>
       <url>/posts/2c4e5608.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言！！"><a href="#前言！！" class="headerlink" title="前言！！"></a>前言！！</h2><blockquote><p>注： 著作权归作者所有。<br>商业转载请联系作者获得授权，非商业转载请注明出处。</p><p>原文地址：  <a href="https://foxlemon.vercel.app/posts/2c4e5608.html">https://foxlemon.vercel.app/posts/2c4e5608.html</a> 原作者：foxscallion 本文没有授权给任何组织、企业和个人转载，未经作者允许禁止转载！ </p><footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html" target="_blank" rel="noopener">Welcome to Island Marketing</a></cite></footer></blockquote> <div class="tip font5 fas fa-atom"><p>因为域名的备案申请还没有通过，想着能够通过免费的CDN来加速网站，同时又能够满足免费的域名，偶尔在别人博客网站上看到了</p><p></p></div>![mark](http://qdraqx6e2.bkt.clouddn.com/blog/20200722/020224337.png)<div class="tip wtgo font5 fas fa-bolt"><p>于是我就通过百度发现了这个vercel是真的真的好用，全自动部署，只要你提交GitHub代码到vercel就可以了，几天前我就想注册个vercel，只是一直苦于无法注册，如图</p><p></p></div>![mark](http://qdraqx6e2.bkt.clouddn.com/blog/20200722/020543399.png)<div class="tip qq font5 fab fa-qq"><p>于是我用谷歌空间注册了foxscallion@gmail.com账号，然后重新注册GitHub，通过这个样子，终于vercel成功登入了。</p><p></p></div><h2 id="通过邮箱重新注册个GitHub"><a href="#通过邮箱重新注册个GitHub" class="headerlink" title="通过邮箱重新注册个GitHub"></a>通过邮箱重新注册个GitHub</h2><ul><li>GitHub重新注册完，添加token密钥</li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/021132801.png" alt="mark"></p><ul><li>将这些框框全部✔，然后确定</li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/021215949.png" alt="mark"></p><ul><li><p>然后新建仓库（怎么建就不说了）</p></li><li><p>把密钥token添加到博客根目录_config.yml的repo</p></li></ul><ul><li><div class="tip qq font5 fab fa-qq"><p>这里先复制密钥（密钥☞存在一次）先复制出来</p><p></p></div></li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/022233262.png" alt="mark"></p><ul><li><div class="tip qq font5 fab fa-qq"><p>注意https://密钥@仓库地址</p><p></p></div></li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/022049398.png" alt="mark"></p><ul><li>复制你的仓库git地址</li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/021348689.png" alt="mark"></p><ul><li>修改博客根目录的_config.yml，将你的地址换过来</li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/021525881.png" alt="mark"></p><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/021608624.png" alt="mark"></p><ul><li>然后hexo clean ，hexo g ，hexo deploy，提交到你刚刚建的GitHub仓库</li></ul><h2 id="注册你的vercel"><a href="#注册你的vercel" class="headerlink" title="注册你的vercel"></a>注册你的vercel</h2><ul><li>访问<a href="https://link.zhihu.com/?target=https%3A//vercel.com/">Vercel</a>官网，根据提示注册账号。个人用户可以免费使用。</li></ul><ul><li><div class="tip qq font5 fab fa-qq"><p>我的是用谷歌的邮箱注册GitHub，然后通过GitHub绑定vercel的</p><p></p></div></li><li><p>我的是用谷歌的邮箱注册GitHub，然后通过GitHub绑定vercel的</p></li><li><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/022926816.png" alt="mark"></p></li><li><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/022946779.png" alt="mark"></p></li></ul><h3 id><a href="#" class="headerlink" title></a></h3><ul><li>点击<code>Import Project</code> -&gt; <code>Import Git Repository</code>，输入git仓库地址，vercel与Github基本上是无缝衔接，绑定过程非常轻松。 </li></ul><ul><li>点击文件<img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/023043263.png" alt="mark"></li><li>添加项目<img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/023116826.png" alt="mark"></li><li>输入仓库地址</li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/023129832.png" alt="mark"></li></ul><ul><li><h3 id="绑定完成后是项目配置。Vercel会自动识别开发框架，这里可以自定义编译代码和输出文件夹，你可以在编译代码中添加自己的逻辑；使用内置框架一般不要修改输出文件夹。"><a href="#绑定完成后是项目配置。Vercel会自动识别开发框架，这里可以自定义编译代码和输出文件夹，你可以在编译代码中添加自己的逻辑；使用内置框架一般不要修改输出文件夹。" class="headerlink" title="绑定完成后是项目配置。Vercel会自动识别开发框架，这里可以自定义编译代码和输出文件夹，你可以在编译代码中添加自己的逻辑；使用内置框架一般不要修改输出文件夹。"></a>绑定完成后是项目配置。Vercel会自动识别开发框架，这里可以自定义编译代码和输出文件夹，你可以在编译代码中添加自己的逻辑；<strong>使用内置框架一般不要修改输出文件夹</strong>。</h3></li><li><p>配置完成后点击<code>Deploy</code>，耐心等待即可</p></li><li><p>等待一会vercel就部署成功了</p></li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/023312020.png" alt="mark"></p><ul><li>点击visit通过浏览器访问</li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/023411471.png" alt="mark"></p><body oncontextmenu="return false" onselectstart="return false" oncopy="return false"></body>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote><p>注： 著作权归作者所有。<br>商业转载请联系作者获得授权，非商业转载请注明出处。</p><p>原文地址：  <a href="https://foxlemon.vercel.app/posts/2c4e5608.html">https://foxlemon.vercel.app/posts/2c4e5608.html</a> 原作者：foxscallion 本文没有授权给任何组织、企业和个人转载，未经作者允许禁止转载！ </p><footer><strong>Seth Godin</strong></footer></blockquote> <div class="tip font5 fas fa-atom"><p>因为域名的备案申请还没有通过，想着能够通过免费的CDN来加速网站，同时又能够满足免费的域名，偶尔在别人博客网站上看到了</p><p></p></div>![mark](http://qdraqx6e2.bkt.clouddn.com/blog/20200722/020224337.png)<div class="tip wtgo font5 fas fa-bolt"><p>于是我就通过百度发现了这个vercel是真的真的好用，全自动部署，只要你提交GitHub代码到vercel就可以了，几天前我就想注册个vercel，只是一直苦于无法注册，如图</p><p></p></div>![mark](http://qdraqx6e2.bkt.clouddn.com/blog/20200722/020543399.png)<div class="tip qq font5 fab fa-qq"><p>于是我用谷歌空间注册了foxscallion@gmail.com账号，然后重新注册GitHub，通过这个样子，终于vercel成功登入了。</p><p></p></div><h2 id="通过邮箱重新注册个GitHub"><a href="#通过邮箱重新注册个GitHub" class="headerlink" title="通过邮箱重新注册个GitHub"></a>通过邮箱重新注册个GitHub</h2><ul><li>GitHub重新注册完，添加token密钥</li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/021132801.png" alt="mark"></p><ul><li>将这些框框全部✔，然后确定</li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/021215949.png" alt="mark"></p><ul><li><p>然后新建仓库（怎么建就不说了）</p></li><li><p>把密钥token添加到博客根目录_config.yml的repo</p></li></ul><ul><li><div class="tip qq font5 fab fa-qq"><p>这里先复制密钥（密钥☞存在一次）先复制出来</p><p></p></div></li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/022233262.png" alt="mark"></p><ul><li><div class="tip qq font5 fab fa-qq"><p>注意https://密钥@仓库地址</p><p></p></div></li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/022049398.png" alt="mark"></p><ul><li>复制你的仓库git地址</li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/021348689.png" alt="mark"></p><ul><li>修改博客根目录的_config.yml，将你的地址换过来</li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/021525881.png" alt="mark"></p><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/021608624.png" alt="mark"></p><ul><li>然后hexo clean ，hexo g ，hexo deploy，提交到你刚刚建的GitHub仓库</li></ul><h2 id="注册你的vercel"><a href="#注册你的vercel" class="headerlink" title="注册你的vercel"></a>注册你的vercel</h2><ul><li>访问<a href="https://link.zhihu.com/?target=https%3A//vercel.com/">Vercel</a>官网，根据提示注册账号。个人用户可以免费使用。</li></ul><ul><li><div class="tip qq font5 fab fa-qq"><p>我的是用谷歌的邮箱注册GitHub，然后通过GitHub绑定vercel的</p><p></p></div></li><li><p>我的是用谷歌的邮箱注册GitHub，然后通过GitHub绑定vercel的</p></li><li><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/022926816.png" alt="mark"></p></li><li><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/022946779.png" alt="mark"></p></li></ul><h3 id><a href="#" class="headerlink" title></a></h3><ul><li>点击<code>Import Project</code> -&gt; <code>Import Git Repository</code>，输入git仓库地址，vercel与Github基本上是无缝衔接，绑定过程非常轻松。 </li></ul><ul><li>点击文件<img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/023043263.png" alt="mark"></li><li>添加项目<img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/023116826.png" alt="mark"></li><li>输入仓库地址</li><li><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/023129832.png" alt="mark"></li></ul><ul><li><h3 id="绑定完成后是项目配置。Vercel会自动识别开发框架，这里可以自定义编译代码和输出文件夹，你可以在编译代码中添加自己的逻辑；使用内置框架一般不要修改输出文件夹。"><a href="#绑定完成后是项目配置。Vercel会自动识别开发框架，这里可以自定义编译代码和输出文件夹，你可以在编译代码中添加自己的逻辑；使用内置框架一般不要修改输出文件夹。" class="headerlink" title="绑定完成后是项目配置。Vercel会自动识别开发框架，这里可以自定义编译代码和输出文件夹，你可以在编译代码中添加自己的逻辑；使用内置框架一般不要修改输出文件夹。"></a>绑定完成后是项目配置。Vercel会自动识别开发框架，这里可以自定义编译代码和输出文件夹，你可以在编译代码中添加自己的逻辑；<strong>使用内置框架一般不要修改输出文件夹</strong>。</h3></li><li><p>配置完成后点击<code>Deploy</code>，耐心等待即可</p></li><li><p>等待一会vercel就部署成功了</p></li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/023312020.png" alt="mark"></p><ul><li>点击visit通过浏览器访问</li></ul><p><img src= "http://qdraqx6e2.bkt.clouddn.com/blog/20200720/173251995.gif" data-src="http://qdraqx6e2.bkt.clouddn.com/blog/20200722/023411471.png" alt="mark"></p><body oncontextmenu="return false" onselectstart="return false" oncopy="return false"></body>]]></content>
       
       
       <categories>
           
-          <category> HEXO </category>
+          <category> Hexo </category>
           
-          <category> vercel </category>
+          <category> 部署 </category>
+          
+          <category> Vercel </category>
           
       </categories>
       
@@ -60,23 +91,17 @@
       <link href="/posts/14d47894.html"/>
       <url>/posts/14d47894.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>Every interaction is both precious and an opportunity to delight.</p><footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html" target="_blank" rel="noopener">Welcome to Island Marketing</a></cite></footer></blockquote><blockquote><p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io" target="_blank" rel="noopener">http://devdocs.io</a></p><footer><strong>@DevDocs</strong><cite><a href="https://twitter.com/devdocs/status/356095192085962752" target="_blank" rel="noopener">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p><footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote><figure class="highlight plain"><figcaption><span>[title] [] [url] [link text] [additional options]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</span><br></pre></td></tr></table></figure><p>&lt;% for (var link in site.data.menu) { %&gt;<br>  <a href="<%= site.data.menu[link] %>"> &lt;%= link %&gt; </a><br>&lt;% } %&gt;</p><ol><li>你好！</li><li>看什么看</li><li>我很帅吗！！！</li></ol>使用方法一：<div class="tip"><p>默认情况</p><p></p></div><div class="tip success"><p>success</p><p></p></div><div class="tip error"><p>error</p><p></p></div><div class="tip warning"><p>warning</p><p></p></div>使用方法二：<div class="tip font5 fas fa-atom"><p>自定义font5图标</p><p></p></div><div class="tip wtgo font5 fas fa-bolt"><p>魔改标签1</p><p></p></div><div class="tip ban font5 fas fa-ban"><p>魔改标签2</p><p></p></div><div class="tip home font5 fas fa-home"><p>魔改标签3</p><p></p></div><div class="tip important font5 fas fa-home"><p>魔改标签4</p><p></p></div><div class="tip ref font5 fas fa-sync"><p>魔改标签5</p><p></p></div><div class="tip ffa font5 fas fa-cogs"><p>魔改标签6</p><p></p></div><div class="tip key font5 fas fa-key"><p>魔改标签7</p><p></p></div><div class="tip socd font5 fas fa-bell"><p>魔改标签8</p><p></p></div><div class="tip qq font5 fab fa-qq"><p></p><p></p></div><p>使用方法三：</p><div class="tip wtgo"><p>文字</p><p></p></div><div class="tip ban"><p>文字</p><p></p></div><div class="tip home"><p>文字</p><p></p></div><div class="tip important"><p>魔改标签4</p><p></p></div><div class="tip ref"><p>魔改标签5</p><p></p></div><div class="tip ffa"><p>魔改标签6</p><p></p></div><div class="tip key"><p>魔改标签7</p><p></p></div><div class="tip socd"><p>魔改标签8</p><p></p></div><div class="tip qq"><p>魔改标签9</p><p></p></div>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>Every interaction is both precious and an opportunity to delight.</p><footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html" target="_blank" rel="noopener">Welcome to Island Marketing</a></cite></footer></blockquote><blockquote><p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io" target="_blank" rel="noopener">http://devdocs.io</a></p><footer><strong>@DevDocs</strong><cite><a href="https://twitter.com/devdocs/status/356095192085962752" target="_blank" rel="noopener">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p><footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote><figure class="highlight plain"><figcaption><span>[title] [] [url] [link text] [additional options]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</span><br></pre></td></tr></table></figure><p>&lt;% for (var link in site.data.menu) { %&gt;<br>  <a href="<%= site.data.menu[link] %>"> &lt;%= link %&gt; </a><br>&lt;% } %&gt;</p><ol><li>你好！</li><li>看什么看</li><li>我很帅吗！！！</li></ol>使用方法一：<div class="tip"><p>默认情况</p><p></p></div><div class="tip success"><p>success</p><p></p></div><div class="tip error"><p>error</p><p></p></div><div class="tip warning"><p>warning</p><p></p></div>使用方法二：<div class="tip font5 fas fa-atom"><p>自定义font5图标</p><p></p></div><div class="tip wtgo font5 fas fa-bolt"><p>魔改标签1</p><p></p></div><div class="tip ban font5 fas fa-ban"><p>魔改标签2</p><p></p></div><div class="tip home font5 fas fa-home"><p>魔改标签3</p><p></p></div><div class="tip important font5 fas fa-home"><p>魔改标签4</p><p></p></div><div class="tip ref font5 fas fa-sync"><p>魔改标签5</p><p></p></div><div class="tip ffa font5 fas fa-cogs"><p>魔改标签6</p><p></p></div><div class="tip key font5 fas fa-key"><p>魔改标签7</p><p></p></div><div class="tip socd font5 fas fa-bell"><p>魔改标签8</p><p></p></div><div class="tip qq font5 fab fa-qq"><p></p><p></p></div>使用方法三：<div class="tip wtgo"><p>文字</p><p></p></div><div class="tip ban"><p>文字</p><p></p></div><div class="tip home"><p>文字</p><p></p></div><div class="tip important"><p>魔改标签4</p><p></p></div><div class="tip ref"><p>魔改标签5</p><p></p></div><div class="tip ffa"><p>魔改标签6</p><p></p></div><div class="tip key"><p>魔改标签7</p><p></p></div><div class="tip socd"><p>魔改标签8</p><p></p></div><div class="tip qq"><p>魔改标签9</p><p></p></div>]]></content>
       
       
       <categories>
           
-          <category> HEXO </category>
+          <category> Hexo </category>
           
           <category> GitHub </category>
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> HEXO </tag>
-            
-        </tags>
       
     </entry>
     
@@ -92,7 +117,7 @@
       
       <categories>
           
-          <category> HEXO </category>
+          <category> Hexo </category>
           
           <category> 图床 </category>
           
@@ -121,7 +146,7 @@
       
       <categories>
           
-          <category> HEXO </category>
+          <category> Hexo </category>
           
           <category> move </category>
           
@@ -130,7 +155,7 @@
       
         <tags>
             
-            <tag> 影视 </tag>
+            <tag> move </tag>
             
         </tags>
       
@@ -148,22 +173,12 @@
       
       <categories>
           
-          <category> HEXO </category>
+          <category> Hexo </category>
           
           <category> 豆瓣 </category>
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> movies </tag>
-            
-            <tag> music </tag>
-            
-            <tag> book </tag>
-            
-        </tags>
       
     </entry>
     
