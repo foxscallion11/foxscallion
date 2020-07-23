@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>【Hexo+双部署】之Coding与Github双线自动部署</title>
+      <link href="/posts/6ba59fd.html"/>
+      <url>/posts/6ba59fd.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>只需要用 git push 一推送，自动把博客部署到了GitHub 和Coding</p><p>背景<br>在玩 Hexo 博客的时候，每次提交写文章，发文章都要在本地先写完，在编译在发布。步骤可谓是极其繁琐，要没个耐心怕早早就弃坑了。幸好 GitHub 有一个能实现自动化的功能—— GitHub Action 。于是乎就有了下文—&gt;</p><body oncontextmenu="return false" onselectstart="return false" oncopy="return false"></body>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【Hexo-Coding】之coding与GitHub双向自动部署</title>
       <link href="/posts/403d8ced.html"/>
       <url>/posts/403d8ced.html</url>
