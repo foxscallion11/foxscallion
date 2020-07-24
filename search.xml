@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>【Hexo-admin】</title>
+      <link href="/posts/c46378bb.html"/>
+      <url>/posts/c46378bb.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo-admin前言"><a href="#hexo-admin前言" class="headerlink" title="hexo-admin前言"></a>hexo-admin前言</h1>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【Hexo+双部署】之Coding与Github双线自动部署</title>
       <link href="/posts/6ba59fd.html"/>
       <url>/posts/6ba59fd.html</url>
