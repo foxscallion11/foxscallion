@@ -87,7 +87,7 @@ h5,
 h6 {
   position: relative;
   margin: 1rem 0 0.7rem;
-  color: #344c67;
+  color: #190e9b;
   font-weight: bold;
 }
 h1 code,
@@ -157,7 +157,7 @@ table thead {
 table th,
 table td {
   padding: 0.3rem 0.6rem;
-  border: 1px solid #00e5e6;
+  border: 1px solid #e6e6e6;
   vertical-align: middle;
 }
 *::selection {
@@ -2239,7 +2239,7 @@ blockquote footer cite:before {
   transform: scale(1);
 }
 .flink#article-container .flink-list > .flink-list-item a {
-  color: #1f2d3d;
+  color: #100964;
   text-decoration: none;
 }
 .flink#article-container .flink-list > .flink-list-item a img {
@@ -2280,11 +2280,11 @@ blockquote footer cite:before {
 #footer-wrap {
   position: relative;
   padding: 2rem 1rem;
-  color: #0ff;
+  color: #fff;
   text-align: center;
 }
 #footer-wrap a {
-  color: #0ff;
+  color: #fff;
   cursor: pointer;
 }
 #footer-wrap a:hover {
@@ -2327,7 +2327,7 @@ blockquote footer cite:before {
 #page-header #site_title,
 #page-header #site_subtitle,
 #page-header #scroll_down .scroll-down-effects {
-  color: #0ff;
+  color: #fff;
   text-align: center;
   text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.15);
   line-height: 1.5;
@@ -2347,7 +2347,7 @@ blockquote footer cite:before {
 }
 #page-header #site_social_icons .social-icon {
   margin: 0 0.5rem;
-  color: #0ff;
+  color: #fff;
   text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.15);
   font-size: 1rem;
   cursor: pointer;
@@ -2390,7 +2390,7 @@ blockquote footer cite:before {
   bottom: 1.5rem;
   padding: 0 8%;
   width: 100%;
-  color: #0ff;
+  color: #fff;
   text-align: left;
 }
 #page-header.post-bg #post-info #post-title {
@@ -2420,7 +2420,7 @@ blockquote footer cite:before {
   margin-right: 0.2rem;
 }
 #page-header.post-bg #post-info #post-meta a {
-  color: #0ff;
+  color: #fff;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -2469,7 +2469,7 @@ _:future,
   font-size: inherit;
 }
 #nav a {
-  color: #0ff;
+  color: #fff;
 }
 #nav a:hover {
   color: #fff;
@@ -3614,7 +3614,7 @@ img {
   position: relative;
   margin: 2rem 0 0.5rem;
   padding: 0.5rem 0.8rem;
-  border: 1px solid #0ff;
+  border: 1px solid #fff;
   -webkit-transition: box-shadow 0.3s ease-in-out;
   -moz-transition: box-shadow 0.3s ease-in-out;
   -o-transition: box-shadow 0.3s ease-in-out;
@@ -3768,7 +3768,7 @@ img {
   transform: translate(0, -50%);
 }
 .relatedPosts .relatedPosts_main .relatedPosts_date {
-  color: #0ff;
+  color: #fff;
   font-size: 90%;
 }
 .relatedPosts .relatedPosts_main .relatedPosts_title {
@@ -4580,7 +4580,7 @@ blockquote.pullquote.right {
 .hide-toggle > .hide-button {
   padding: 0.3rem 0.5rem;
   background: #f0f0f0;
-  color: #1f2d3d;
+  color: #100964;
   cursor: pointer;
 }
 .hide-toggle > .hide-button > i {
@@ -4799,7 +4799,7 @@ blockquote.pullquote.right {
   padding: 0.5rem 1rem;
   border-top: 2px solid #f0f0f0;
   background: #f0f0f0;
-  color: #1f2d3d;
+  color: #100964;
   width: 100%;
   line-height: 2;
   -webkit-transition: all 0.4s;
