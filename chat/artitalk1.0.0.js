@@ -1,4 +1,4 @@
-<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>    var string="<ul class="\"cbp_tmtimeline\"" id="\"maina\"" pagesize="+per+">";
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>    var string="<ul class=\"cbp_tmtimeline\" id=\"maina\" pagesize="+per+">";
     var pos="";
     var oss="";
     $.ajaxSettings.async=false;
@@ -35,11 +35,81 @@
                     for (var i = pagesize; i < $children.length; i++) {
                         $children.eq(i).hide();
                     }
-                    $("<div class="\"vpage" txt-center\" style="\"display:" block; text-align: center;\"><button type="\"button\"" class="\"button\"">加载更多...</button></div><br>").insertAfter($(this)).click(function () {
-                        if (cbp_tmtimeline($children, pagesize) <= 10 0) { 如果目标元素已经没有隐藏的子元素了，就隐藏“点击更多的按钮条” $(this).hide(); document.getelementbyid("sa").innerhtml="<center>已经到底啦~</center>" }; }); } function p(s){ return s < ? '0' + : preview(){ var pre="document.getElementById("neirong").value;" document.getelementbyid("preview").innerhtml="pre;" savecontent(){ shuoshuo="document.getElementById("neirong").value;" password="document.getElementById("key").value;" if(password="=""){" alert("请输入密码"); ; av.user.login(username,password).then(function (logineduser) }, (error) console.dir(error); if(error.code="==211){" alert('本页面只允许站长发布说说'); }else if(shuoshuo="=""){" alert("内容不能为空"); testobject="AV.Object.extend('shuoshuo');" testobject(); testobject.set('content', shuoshuo); testobject.set('postion', pos); testobject.set('os', oss); testobject.save().then(function (testobject) location.reload(); }) seecontent(){ av.init({ appid: appid, appkey: appkey, currentuser="AV.User.current();" if (currentuser) av.user.logout(); query="new" av.query('shuoshuo'); query.descending('createdat'); query.find().then(function (remarks) remarks.foreach(function(atom){ uncle="atom.attributes.content;" posti="atom.attributes.postion;" os="atom.attributes.os;" fake="atom.createdAt;" d="new" date(fake); const resdate="d.getFullYear()" '-' this.p((d.getmonth() 1)) this.p(d.getdate()) restime="this.p(d.getHours())" ':' this.p(d.getminutes()) this.p(d.getseconds()) li="document.createElement('li');" cc="<li><span class=\" shuoshuo_author_img\"><img src= "https://cdn.jsdelivr.net/gh/foxscallion11/source//imgaes/20200728143048.gif" data-src="/chat/artitalk1.0.0.j/""+img+"\"class=\"avatar" avatar-48\" width="\"48\"" height="\"48\""><span class="\"cbp_tmlabel\""><p></p><p>"+uncle+"</p><p></p><p class="\"shuoshuo_time\"">"+"<span style="\"float:left;\""><i class="\"fas" fa-user-edit\"></i>由   "+OS+"发表</span><span style="\"float:right;\""><i class="\"fa" fa-clock-o\"></i>"+" "+ resDate+" "+resTime+"     "+"</span></p></span>"
+                    $("<div class=\"vpage txt-center\" style=\"display: block; text-align: center;\"><button type=\"button\" class=\"button\">加载更多...</button></div><br>").insertAfter($(this)).click(function () {
+                        if (cbp_tmtimeline($children, pagesize) <= 0) {
+                            //如果目标元素已经没有隐藏的子元素了，就隐藏“点击更多的按钮条”
+                            $(this).hide();
+                            document.getElementById("sa").innerHTML="<center>已经到底啦~</center>"
+                        };
+                    });
+                }
+            });
+        }
+    }
+    function p(s){
+        return s < 10 ? '0' + s : s
+    }
+    function preview(){
+        var pre=  document.getElementById("neirong").value;
+        document.getElementById("preview").innerHTML=pre;
+    }
+    function savecontent(){
+        var shuoshuo=  document.getElementById("neirong").value;
+        var password = document.getElementById("key").value;
+        if(password==""){
+            alert("请输入密码");
+            return ;
+        }
+        AV.User.logIn(username,password).then(function (loginedUser) {
+          }, function (error) {
+            console.dir(error);
+            if(error.code===211){
+              alert('本页面只允许站长发布说说');
+              return ;
+            }else if(error.code===210){
+              alert('本页面只允许站长发布说说');
+              return ;
+            }
+          });
+          
+        if(shuoshuo==""){  
+            alert("内容不能为空");
+            return ;
+        }
+        var TestObject = AV.Object.extend('shuoshuo');
+        var testObject = new TestObject();
+        testObject.set('content', shuoshuo);
+        testObject.set('postion', pos);
+        testObject.set('os', oss);
+        testObject.save().then(function (testObject) {
+            location.reload();
+        })
+    }
+    function seecontent(){
+        AV.init({
+            appId: appID,
+            appKey: appKEY,
+        });
+        var currentUser = AV.User.current();
+        if (currentUser) {
+             AV.User.logOut();
+        }
+        var query = new AV.Query('shuoshuo');
+        query.descending('createdAt');
+        query.find().then(function (remarks) {
+            remarks.forEach(function(atom){
+                var uncle=atom.attributes.content;
+                var posti=atom.attributes.postion;
+                var OS=atom.attributes.os;
+                var fake=atom.createdAt;
+                var d = new Date(fake);
+                const resDate = d.getFullYear() + '-' + this.p((d.getMonth() + 1)) + '-' + this.p(d.getDate())
+                const resTime = this.p(d.getHours()) + ':' + this.p(d.getMinutes()) + ':' + this.p(d.getSeconds())
+                var li=document.createElement('li');
+                var cc="<li><span class=\"shuoshuo_author_img\"><img src= "https://cdn.jsdelivr.net/gh/foxscallion11/source//imgaes/20200728143048.gif" data-src=\""+img+"\"class=\"avatar avatar-48\" width=\"48\" height=\"48\"></span><span class=\"cbp_tmlabel\" ><p></p><p>"+uncle+"</p><p></p><p class=\"shuoshuo_time\">"+"<span style=\"float:left;\"><i class=\"fas fa-user-edit\"></i>由   "+OS+"发表</span><span style=\"float:right;\"><i class=\"fa fa-clock-o\"></i>"+" "+ resDate+" "+resTime+"     "+"</p></span></span></li>"
                 string+=cc;
             })
-            string+='</=></ul>';
+            string+='</ul>';
             document.getElementById("ccontent").innerHTML=string;
             ok();
             $.showMore(".cbp_tmtimeline");
