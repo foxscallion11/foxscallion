@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://m.foxscallion.top/gallery/index.html</loc>
+    <loc>https://m.foxscallion.top/about/index.html</loc>
     
-    <lastmod>2020-07-28T09:06:35.592Z</lastmod>
+    <lastmod>2020-07-28T09:23:30.414Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://m.foxscallion.top/marvel/index.html</loc>
+    
+    <lastmod>2020-07-28T09:22:47.329Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://m.foxscallion.top/tags/index.html</loc>
+    
+    <lastmod>2020-07-28T09:22:05.860Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://m.foxscallion.top/movie/index.html</loc>
     
-    <lastmod>2020-07-28T08:50:21.868Z</lastmod>
+    <lastmod>2020-07-28T09:21:26.899Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://m.foxscallion.top/gallery/index.html</loc>
+    
+    <lastmod>2020-07-28T09:20:36.699Z</lastmod>
     
   </url>
   
@@ -86,13 +107,6 @@
   </url>
   
   <url>
-    <loc>https://m.foxscallion.top/marvel/index.html</loc>
-    
-    <lastmod>2020-07-21T03:09:04.387Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://m.foxscallion.top/chat/index.html</loc>
     
     <lastmod>2020-07-21T02:59:20.795Z</lastmod>
@@ -107,23 +121,9 @@
   </url>
   
   <url>
-    <loc>https://m.foxscallion.top/tags/index.html</loc>
-    
-    <lastmod>2020-07-21T01:09:20.582Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://m.foxscallion.top/random/index.html</loc>
     
     <lastmod>2020-07-20T15:24:41.256Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://m.foxscallion.top/about/index.html</loc>
-    
-    <lastmod>2020-07-19T15:54:36.654Z</lastmod>
     
   </url>
   
