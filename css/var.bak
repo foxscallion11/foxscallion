@@ -47,7 +47,8 @@ $grey = #858585
 $white = #FFFFFF
 $whitesmoke = #f5f5f5
 $font-black = #4C4948
-$card-bg = $white
+$card-bg = #efefef
+//$white
 // code
 $line-height-code-block = 20px
 $blockquote-color = #6a737d
