@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>python</title>
-      <link href="/posts/a4d4b8b8.html"/>
-      <url>/posts/a4d4b8b8.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>自主学习</p><h1 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h1><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#2.用法: print(name , age, gender) </span><br><span class="line">age &#x3D;18</span><br><span class="line">gender &#x3D;&#39; boy &#39;</span><br><span class="line">print ( name , age，gender) # sep默认的分割是空格</span><br><span class="line"># 3.用法: print(value ,value, value,... ,sep&#x3D;&#39; &#39;，end&#x3D;&#39;\n &#39;)</span><br><span class="line">print (name , age, gender ,sep&#x3D;&#39;-&#39;) # sep&#x3D;6*3</span><br><span class="line">sep&#x3D;&#39; $&#39; sep&#x3D;&#39; -</span><br><span class="line">#转义字符:\n换行</span><br><span class="line">print( &#39;hello\nkitty&#39;)</span><br><span class="line">print(&#39; AAA&#39; ,end&#x3D;&#39;&#39; )</span><br><span class="line">#&#39;AAA\n&#39;---&gt;&#39;AAA&#39;</span><br><span class="line">print( &#39; BBB&#39; , end&#x3D; )</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><p><img src= "https://cdn.jsdelivr.net/gh/foxscallion11/source//imgaes/20200728143048.gif" data-src="https://cdn.jsdelivr.net/gh/foxscallion11/source/imgs/63964404cc7a80c3.png" alt=""><br><img src= "https://cdn.jsdelivr.net/gh/foxscallion11/source//imgaes/20200728143048.gif" data-src="https://cdn.jsdelivr.net/gh/foxscallion11/source/imgs/84ab7528a5ac74d.png" alt=""><br><img src= "https://cdn.jsdelivr.net/gh/foxscallion11/source//imgaes/20200728143048.gif" data-src="https://i.niupic.com/images/2020/07/29/8sX4.png" alt=""></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>【Hexo-Termux】之手机神器编写博客无须电脑操</title>
       <link href="/posts/d1bdbb0.html"/>
       <url>/posts/d1bdbb0.html</url>
